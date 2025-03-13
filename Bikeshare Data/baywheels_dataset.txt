@@ -1,0 +1,12 @@
+The Datasets can be found on https://s3.amazonaws.com/baywheels-data/index.html
+
+It is too large to upload on Github.
+There are few data cleaning steps which need to be performed before the final dataset can be used. 
+
+They are:
+
+1. Data from 2018 to March 2020 is not in line with the data after March 2020. Columns need to be renamed and a few columns need to be dropped. 
+2. Data for April 2020 is not available on the website. So it must be skipped. 
+3. There are a couple of columns which need to be added to the data between 2018 to March 2020 with NA values since the coloumns do not explicitly exist in the data 
+   for those months. 
+4. All the files need to be merged together and then used for analysis. Size of the final dataset is around 3GB
