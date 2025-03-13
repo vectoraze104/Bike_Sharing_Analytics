@@ -1,12 +1,53 @@
-The Datasets can be found on https://s3.amazonaws.com/baywheels-data/index.html
+### 🔗 Dataset Source
 
-It is too large to upload on Github.
-There are few data cleaning steps which need to be performed before the final dataset can be used. 
+- **Datasets URL:** [BayWheels Data](https://s3.amazonaws.com/baywheels-data/index.html)
 
-They are:
+---
 
-1. Data from 2018 to March 2020 is not in line with the data after March 2020. Columns need to be renamed and a few columns need to be dropped. 
-2. Data for April 2020 is not available on the website. So it must be skipped. 
-3. There are a couple of columns which need to be added to the data between 2018 to March 2020 with NA values since the coloumns do not explicitly exist in the data 
-   for those months. 
-4. All the files need to be merged together and then used for analysis. Size of the final dataset is around 3GB
+### 📋 Things to Know About the Dataset
+
+- **🗂️ Monthly Datasets:**  
+  - The datasets are provided on a monthly basis. I combined them into one large dataset.
+
+- **⚠️ Column Inconsistencies:**  
+  - For the first 2 years (up to March 2020), there are inconsistencies in the columns.  
+  - **Note:** Some columns present in 2019 to March 2020 are missing in data after March 2020.
+
+- **🚫 Missing Data:**  
+  - Data for **April 2020** is not available on the website and was skipped.
+
+- **🧹 Data Cleaning:**  
+  - I cleaned the data and resolved the column inconsistencies before merging all datasets together.
+
+- **💾 File Size:**  
+  - The final combined file is **3.12 GB**.
+
+- **📦 GitHub & Git LFS:**  
+  - GitHub does not allow large files to be uploaded directly, so I used **Git LFS** to manage the dataset.  
+  - **Tip:** If you're not familiar with Git LFS, check out [this YouTube video](https://www.youtube.com/watch?v=4Ln6iRh_LTo&t=174s) for a clear explanation.
+
+- **🛠️ Splitting Files:**  
+  - Even with Git LFS, users cannot upload datasets larger than 2GB in one go.  
+  - I had to break the dataset into 2 parts. **Make sure to download both and merge them before proceeding.**
+
+---
+
+### 🔍 Data Cleaning Steps Performed
+
+- **❌ Inconsistent Data (2018 - Mar 2020):**  
+  - Columns in data from 2018 to March 2020 didn't align with data from later months.  
+  - **Action:** Renamed some columns and dropped others to standardize the data.
+
+- **🚫 Skipped Data:**  
+  - Data for **April 2020** is missing on the website, so it was omitted.
+
+- **📝 Adding Missing Columns:**  
+  - For the period 2018 to March 2020, a few columns were missing.  
+  - **Action:** Added those columns with `NA` values to ensure consistency.
+
+- **🔗 Final Merge:**  
+  - All the cleaned files were merged into one final dataset, which is around **3GB** in size and ready for analysis.
+
+---
+
+This summary should give you a clear overview of how the dataset was acquired, cleaned, and prepared for analysis. 
